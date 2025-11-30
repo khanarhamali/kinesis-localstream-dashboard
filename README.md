@@ -44,35 +44,45 @@ E:\kinesis-local-project
 
 ## Setup Instructions
 
-1. **Clone the repository:**
+1. Clone the repository:
 ```bash
 git clone https://github.com/khanarhamali/kinesis-localstream-dashboard.git
 cd kinesis-local-project
-Create and activate Python virtual environment:
 
-bash
-Copy code
+
+
+2. **Create and activate Python virtual environment:**
+```bash
 python -m venv .venv
 .\.venv\Scripts\activate   # Windows
 # OR
 source .venv/bin/activate  # Mac/Linux
-Install dependencies:
 
-bash
-Copy code
+
+3. **Install dependencies:**
+```bash
 pip install -r requirements.txt
-Start LocalStack via Docker:
 
-bash
-Copy code
+
+4. **Start LocalStack via Docker:**
+```bash
 docker-compose up
-Run producer to send data:
 
-bash
-Copy code
+5. **Run producer to send data:**
+```bash
 python producer.py
-Run Streamlit dashboard:
 
-bash
-Copy code
+
+6. **Run Streamlit dashboard:**
+```bash
 streamlit run dashboard.py
+
+---
+
+## Notes
+
+Make sure Docker is running before starting LocalStack.
+
+Use the dashboard to monitor real-time temperature data and alerts.
+
+Virtual environment .venv/ is ignored in GitHub to avoid large commits.
