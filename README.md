@@ -1,8 +1,9 @@
 # Kinesis LocalStream Dashboard
 
 A complete **real-time data streaming project** using **AWS Kinesis, LocalStack, Python, and Streamlit**.  
-This project simulates IoT devices sending temperature data to Kinesis streams and visualizes it live on a Streamlit dashboard.
+Kinesis LocalStream Dashboard is a fully functional local simulation of an AWS Kinesis streaming pipeline using LocalStack, designed for IoT data streaming, live analytics, and visualization. This project demonstrates how multiple IoT devices can send real-time temperature data to a Kinesis stream, which can then be visualized through a Streamlit dashboard with live charts, alerts, and multi-device comparison.
 
+It includes a Firehose simulation that writes stream data to a local S3 bucket, enabling end-to-end testing of streaming workflows without requiring a live AWS account. This repository is ideal for developers, data engineers, and students learning real-time data streaming, AWS Kinesis, IoT analytics, and Python-based dashboards.
 ---
 
 ## Features
@@ -39,51 +40,39 @@ E:\kinesis-local-project
 ├── requirements.txt # Python dependencies
 └── .venv/ # Virtual environment (ignored in git)
 
-## Setup Instructions
-
-1. Clone the repository:
-```bash
-git clone https://github.com/khanarhamali/kinesis-localstream-dashboard.git
-cd kinesis-local-project
+---
 
 ## Setup Instructions
 
-1. Clone the repository:
+1. **Clone the repository:**
 ```bash
 git clone https://github.com/khanarhamali/kinesis-localstream-dashboard.git
 cd kinesis-local-project
+Create and activate Python virtual environment:
 
-2. Create and activate Python virtual environment:
-
+bash
+Copy code
 python -m venv .venv
 .\.venv\Scripts\activate   # Windows
 # OR
 source .venv/bin/activate  # Mac/Linux
+Install dependencies:
 
-
-3. Install dependencies:
-
+bash
+Copy code
 pip install -r requirements.txt
+Start LocalStack via Docker:
 
-
-4. Start LocalStack via Docker:
-
+bash
+Copy code
 docker-compose up
+Run producer to send data:
 
-5. Run producer to send data:
-
+bash
+Copy code
 python producer.py
+Run Streamlit dashboard:
 
-
-6. Run Streamlit dashboard:
-
+bash
+Copy code
 streamlit run dashboard.py
-
-
-## Notes
-
-Make sure Docker is running before starting LocalStack.
-
-Use the dashboard to monitor real-time temperature data and alerts.
-
-Virtual environment .venv/ is ignored in GitHub to avoid large commits.
