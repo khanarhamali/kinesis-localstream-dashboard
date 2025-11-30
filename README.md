@@ -27,6 +27,7 @@ This project simulates IoT devices sending temperature data to Kinesis streams a
 
 ---
 ## Project Structure
+
 E:\kinesis-local-project
 │
 ├── producer.py # Simulates IoT devices sending data
@@ -38,6 +39,51 @@ E:\kinesis-local-project
 ├── requirements.txt # Python dependencies
 └── .venv/ # Virtual environment (ignored in git)
 
+## Setup Instructions
 
-## Project Structure
+1. Clone the repository:
+```bash
+git clone https://github.com/khanarhamali/kinesis-localstream-dashboard.git
+cd kinesis-local-project
 
+## Setup Instructions
+
+1. Clone the repository:
+```bash
+git clone https://github.com/khanarhamali/kinesis-localstream-dashboard.git
+cd kinesis-local-project
+
+2. Create and activate Python virtual environment:
+
+python -m venv .venv
+.\.venv\Scripts\activate   # Windows
+# OR
+source .venv/bin/activate  # Mac/Linux
+
+
+3. Install dependencies:
+
+pip install -r requirements.txt
+
+
+4. Start LocalStack via Docker:
+
+docker-compose up
+
+5. Run producer to send data:
+
+python producer.py
+
+
+6. Run Streamlit dashboard:
+
+streamlit run dashboard.py
+
+
+## Notes
+
+Make sure Docker is running before starting LocalStack.
+
+Use the dashboard to monitor real-time temperature data and alerts.
+
+Virtual environment .venv/ is ignored in GitHub to avoid large commits.
