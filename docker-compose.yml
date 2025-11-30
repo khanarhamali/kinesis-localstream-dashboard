@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=kinesis,firehose,s3
+      - DEBUG=1
+      - DATA_DIR=/tmp/localstack/data
+      - KINESIS_INITIALIZE_STREAMS=stream1
+  
