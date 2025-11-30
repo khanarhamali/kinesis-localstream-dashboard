@@ -1,19 +1,19 @@
 # Kinesis LocalStream Dashboard
 
 A complete **real-time data streaming project** using **AWS Kinesis, LocalStack, Python, and Streamlit**.  
+This project simulates IoT devices sending temperature data to Kinesis streams and visualizes it live on a Streamlit dashboard.
 
-Kinesis LocalStream Dashboard is a fully functional local simulation of an AWS Kinesis streaming pipeline using LocalStack, designed for IoT data streaming, live analytics, and visualization. This project demonstrates how multiple IoT devices can send real-time temperature data to a Kinesis stream, which can then be visualized through a Streamlit dashboard with live charts, alerts, and multi-device comparison. It includes a Firehose simulation that writes stream data to a local S3 bucket, enabling end-to-end testing of streaming workflows without requiring a live AWS account. This repository is ideal for developers, data engineers, and students learning real-time data streaming, AWS Kinesis, IoT analytics, and Python-based dashboards.
 ---
 
 ## Features
 
-✅ Real-time data ingestion from multiple simulated devices
-✅ AWS Kinesis Stream simulation via LocalStack
-✅ Streamlit dashboard with live temperature charts
-✅ Firehose → local S3 simulation
-✅ Alerts when device temperature exceeds threshold
-✅ Multi-device comparison
-✅ Auto-refresh every 2 seconds
+- ✅ Real-time data ingestion from multiple simulated devices
+- ✅ AWS Kinesis Stream simulation via LocalStack
+- ✅ Streamlit dashboard with live temperature charts
+- ✅ Firehose → local S3 simulation
+- ✅ Alerts when device temperature exceeds threshold
+- ✅ Multi-device comparison
+- ✅ Auto-refresh every 2 seconds
 
 ---
 
@@ -26,6 +26,7 @@ Kinesis LocalStream Dashboard is a fully functional local simulation of an AWS K
 - Docker (LocalStack container)
 
 ---
+
 ## Project Structure
 
 E:\kinesis-local-project
